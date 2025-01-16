@@ -1,0 +1,113 @@
+<!-- ###################################################################################### -->
+<!-- HERE WE WILL LEARN HOW TO SELECT AN OBJECT -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">DOM learning from chai aur code sir <span style="display: none;"> test text which will not show in the DOM</span></h1>
+        <h2 id="heading2" class="HALA">Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <input type="password" name="" id="">
+    </div>
+
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+</body>
+</html>
+
+<!-- this are typed in the console tag in the browser-->
+
+<!--  document.getElementById("title") by this we will specifically select an ID to do the modifiction -->
+
+<!-- we can also select an entire tag from html , By using document.getElementsByTags("body") -->
+
+<!--1. document.getElementById("title").id === to check what is the ID name , because we might access the document using the class id , to avoid such things we use this -->
+
+
+<!--2. document.getElementById("title").class  -->
+<!-- when we type only class then it results in undefined -->
+<!-- to get the result we have to type classname  -->
+<!--3. document.getElementById("title").className -->
+<!-- because the DOM element understand like this only -->
+
+<!--4. document.getElementById("title").getAttribute 
+we have to provide the parameters as well , which attrributes we want , such ID , class , etc.
+
+for eg :- document.getElementById("title").getAttribute('id')
+for eg :- document.getElementById("title").getAttribute('class')
+
+-->
+
+<!-- this method helps us to change the class or Id name and set a new name  -->
+<!-- 5. document.getElementById("title").setAttribute('class','test') -->
+<!-- this is used to overwrite an attribute and can be checked in element section in browser
+
+But if we want to keep the both name then we can use 
+document.getElementById("title").setAttribute('class','test heading')-->
+<!-- NOTE WE CAN CHANGE THIS ONLY ONCE after that we have to refresh the webpage to change again. -->
+
+<!-- title is name of the ID and by using the id name we can select the id and style it . as below -->
+
+<!-- 6. title.style.backgroundColor = "red" -->
+<!-- title is the name of the id where we want to do the change -->
+<!-- by using .style we can style in the DOM
+title.style.borderRadius = "15px"
+title.style.padding = "5px" -->
+
+<!-- ####### IMPORTANT ############# MOSTLY USE -->
+
+<!-- title.innerHTML === it gives us everything even the tags also -->
+<!-- getInnerHTML it will give us the newly added line. or print it in the console.  -->
+<!-- title.innerText == here we get only what we can see -->
+<!-- title.textContent  == we get all the values which are hidden also-->
+<!-- these three gives us same values but gives us different types of values. -->
+
+<!-- document.getElementsByClassName("heading") == this helps us to select the class by its ID -->
+
+<!-- SOME IMPORTANT ELEMENT -->
+
+<!-- document.querySelector("#title")== this is how we gonna select the id-->
+<!-- document.querySelector(".heading") == this is how we are going to select a class -->
+
+<!-- document.querySelector('input[type="password"]') -->
+
+<!-- ################################################################### -->
+
+<!-- this is how we can select items using query selector and add styling and change it -->
+
+<!--1. document.querySelector("ul") -->
+<!-- 2. const myUl = document.querySelector("ul")  -->
+<!-- 3. myUl.querySelector("li")-->
+<!-- 4. const turngreen = myUl.querySelector("li") -->
+<!-- 5. turngreen.style.backgroundColor = "green" -->
+
+<!-- query selector gives us only one value. -->
+
+<!-- ############################################################ -->
+
+<!-- query selector all -->
+<!-- const tempLiList = document.querySelectorAll("li") -->
+<!-- tempLiList[0].style.color = "red" -->
+<!-- in the above line we can see that we have used an index number to colour it . this is because node list have some similar properties like an array. -->
+
+<!-- the major differences between querySelector and querySelectorAll is that QS select the specific items where as QSA selects all the items which we provide such as li, h1, etc. with the above example we can see that as we have provide the li , so it selects all the li , to do modification we have to provide the index number to be more specific -->
+
+
+<!-- ################################################################################ -->

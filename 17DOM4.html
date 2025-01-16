@@ -1,0 +1,29 @@
+<!-- ################################################################################## -->
+
+<!-- here we will learn how to create elements in the html and add it to the DOM -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM LEARNING 4</title>
+</head>
+<body style="background-color: black; color: beige;">
+    
+</body>
+<script>
+   const div =  document.createElement('div');
+    console.log(div);
+    div.ClassName = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor = "green"
+    const addText = document.createTextNode("Hi this is my World")
+    div.appendChild(addText)
+    // all the above code will be not visible on the page. because this child is not attached to the page . it is stored in the memory. we have to say to JS to attach this page 
+    
+    document.body.appendChild(div);
+</script>
+</html>
